@@ -18,6 +18,12 @@
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>
+            msvc-cliente/msvc-cliente
+        </module>
+    </modules>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
