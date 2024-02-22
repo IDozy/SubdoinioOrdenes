@@ -22,6 +22,12 @@
         <module>
             msvc-cliente/msvc-cliente
         </module>
+        <module>
+            msvc-productos/msvc-productos
+        </module>
+        <module>
+            msvc-empleados/msvc-empleados
+        </module>
     </modules>
 
     <properties>

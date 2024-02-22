@@ -48,6 +48,7 @@ public class ClienteController {
             clienteDB.setSurname(cliente.getSurname());
             clienteDB.setEmail(cliente.getEmail());
             clienteDB.setPhone(cliente.getPhone());
+            clienteDB.setAddress(cliente.getAddress());
 
             return ResponseEntity.status(HttpStatus.CREATED).body(service.guardar(clienteDB));
         }else{

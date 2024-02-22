@@ -1,21 +1,23 @@
-package com.huatayordenes.springcloud.msvc.cliente.models.entity;
+package com.huatayordenes.springcloud.msvc.empleados.models.entity;
+
 
 import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "clientes")
-public class Cliente {
-    @Id
+@Table(name = "productos")
+public class Empleado {
+
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String surname;
     @Column(unique = true)
-    private String email;
-    private String phone;
-
+    private String dni;
     private String address;
+    private String phone;
+    private Double sueldo;
 
     public Long getId() {
         return id;
@@ -41,12 +43,20 @@ public class Cliente {
         this.surname = surname;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDni() {
+        return dni;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhone() {
@@ -57,11 +67,11 @@ public class Cliente {
         this.phone = phone;
     }
 
-    public String getAddress() {
-        return address;
+    public Double getSueldo() {
+        return sueldo;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setSueldo(Double sueldo) {
+        this.sueldo = sueldo;
     }
 }
