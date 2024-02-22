@@ -28,6 +28,9 @@
         <module>
             msvc-empleados/msvc-empleados
         </module>
+        <module>
+            msvc-articulo/msvc-articulo
+        </module>
     </modules>
 
     <properties>
