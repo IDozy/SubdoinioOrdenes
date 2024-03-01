@@ -35,4 +35,7 @@ public class ClienteServicempl implements ClienteService {
     public void eliminar(Long id) {
     repository.deleteById(id);
     }
+
+    @Override
+    public Optional<Cliente> porEmail(String email) {return repository.findByEmail(email);}
 }

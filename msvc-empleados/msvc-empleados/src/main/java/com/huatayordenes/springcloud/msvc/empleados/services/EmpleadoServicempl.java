@@ -37,4 +37,7 @@ public class EmpleadoServicempl implements EmpleadoService{
     public void eliminar(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public Optional<Empleado> porDni(String dni) {return repository.findByDni(dni);}
 }

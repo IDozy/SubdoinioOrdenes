@@ -1,6 +1,10 @@
 package com.huatayordenes.springcloud.msvc.cliente.models.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 
 
 @Entity
@@ -9,12 +13,18 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
     private String name;
+    @NotBlank
     private String surname;
+    @NotBlank
+    @Email
     @Column(unique = true)
     private String email;
+    @NotBlank
+    @Pattern(regexp = "\\d{9}")
     private String phone;
-
+    @NotEmpty
     private String address;
 
     public Long getId() {

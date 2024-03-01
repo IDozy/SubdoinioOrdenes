@@ -35,4 +35,6 @@ public class ArticuloServicempl implements ArticuloService {
     public void eliminar(Long id) {
     repository.deleteById(id);
     }
+    @Override
+    public Optional<Articulo> porNombre(String name) {return repository.findByName(name);}
 }

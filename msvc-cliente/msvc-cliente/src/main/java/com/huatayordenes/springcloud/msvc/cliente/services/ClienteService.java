@@ -10,4 +10,5 @@ public interface ClienteService {
     Optional<Cliente> porId(Long id);
     Cliente guardar(Cliente cliente);
     void eliminar(Long id);
+    Optional<Cliente> porEmail(String email);
 }

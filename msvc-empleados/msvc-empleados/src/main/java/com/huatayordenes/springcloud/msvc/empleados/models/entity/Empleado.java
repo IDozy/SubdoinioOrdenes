@@ -2,21 +2,37 @@ package com.huatayordenes.springcloud.msvc.empleados.models.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 
 @Entity
-@Table(name = "productos")
+@Table(name = "empleados")
 public class Empleado {
 
-   @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank
     private String name;
+
+    @NotBlank
     private String surname;
+
+    @NotBlank
     @Column(unique = true)
+    @Pattern(regexp = "\\d{8}")
     private String dni;
+
+    @NotBlank
     private String address;
+
+    @NotBlank
+    @Pattern(regexp = "\\d{9}")
     private String phone;
+
+    @NotNull
+    @DecimalMin(value = "0.0")
     private Double sueldo;
 
     public Long getId() {

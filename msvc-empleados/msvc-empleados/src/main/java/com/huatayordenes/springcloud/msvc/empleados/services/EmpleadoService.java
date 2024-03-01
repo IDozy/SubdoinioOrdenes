@@ -13,4 +13,6 @@ public interface EmpleadoService {
     Empleado guardar(Empleado empleado);
     void eliminar(Long id);
 
+    Optional<Empleado> porDni(String dni);
+
 }

@@ -10,4 +10,6 @@ public interface ArticuloService {
     Optional<Articulo> porId(Long id);
     Articulo guardar(Articulo articulo);
     void eliminar(Long id);
+
+    Optional<Articulo> porNombre(String name);
 }

@@ -4,6 +4,7 @@ package com.huatayordenes.springcloud.msvc.productos.models.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 
@@ -19,7 +20,7 @@ public class Producto {
     @Column(unique = true)
     private String name;
 
-    @NotBlank
+    @NotNull
     @DecimalMin(value = "0.0")
     private Double price;
 
