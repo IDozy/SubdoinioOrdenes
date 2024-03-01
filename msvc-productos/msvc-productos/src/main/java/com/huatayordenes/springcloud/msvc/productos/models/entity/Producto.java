@@ -2,6 +2,9 @@ package com.huatayordenes.springcloud.msvc.productos.models.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 
 @Entity
@@ -11,8 +14,17 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank
+    @Column(unique = true)
     private String name;
+
+    @NotBlank
+    @DecimalMin(value = "0.0")
     private Double price;
+
+    @NotBlank
+    @Size(max = 255)
     private String description;
 
     public Long getId() {
