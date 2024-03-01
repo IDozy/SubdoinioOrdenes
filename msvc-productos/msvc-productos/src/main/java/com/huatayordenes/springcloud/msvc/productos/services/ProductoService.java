@@ -11,4 +11,6 @@ public interface ProductoService {
     Producto guardar(Producto producto);
     void eliminar(Long id);
 
+    Optional<Producto> porNombre(String name);
+
 }

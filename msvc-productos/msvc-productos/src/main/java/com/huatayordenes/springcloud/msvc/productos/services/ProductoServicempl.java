@@ -35,4 +35,9 @@ public class ProductoServicempl implements ProductoService{
     public void eliminar(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public Optional<Producto> porNombre(String name) {
+       return repository.findByName(name);
+    }
 }
